@@ -1,0 +1,35 @@
+#show_stats {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    background-color:rgb(94, 110, 255);
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+#select {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    background-color:rgb(252, 255, 94);
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+#stats_block {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding-left: 200px;
+    display: block;
+}
