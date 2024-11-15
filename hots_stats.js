@@ -30,15 +30,34 @@ const showStatsButton = document.getElementById("show_stats")
 showStatsButton.addEventListener("click", showStats)
 
 function showStats(event) {
+    if(document.querySelector(".stats_element")) {
+        document.querySelector(".stats_element").remove()
+    }
+    
     const currentSelected = document.getElementById("select")
     const heroStats = heroesStats.filter((heroName) => currentSelected.value === heroName.hero)
     const statsElement = document.createElement("p")
     statsElement.classList.add("stats_element")
     const statsBlock = document.getElementById("stats_block")
-    const wins = heroStats.reduce((winsSum, win) => winsSum + win, 0)
-    const loses = heroStats.reduce((losesSum, lose) =>  losesSum + lose, 0)
+
+
+    const wins = heroStats.reduce((winsSum, win) => {
+        if( win.win === true ) return winsSum + 1
+
+        return winsSum
+    }, 0)
+
+
+    const loses = heroStats.reduce((losesSum, lose) => {
+        if( lose.win === false ) return losesSum + 1
+
+        return losesSum
+    }, 0)
+
+
+    const wr = (wins / heroStats.length) * 100
     
-    statsBlock.innerHTML = `W:${wins} L:${loses} WR:`
+    statsElement.innerHTML = `W:${wins} L:${loses} WR:${wr}%`
     
     
     
@@ -48,14 +67,5 @@ function showStats(event) {
 
 
 
-
-
-
-
-
-
-console.log("Слава Україні")
-console.log(heroStats)
-console.log(wins)
 
 }
