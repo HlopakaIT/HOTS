@@ -4,7 +4,7 @@
     font-weight: 400;
     background-color:rgb(94, 110, 255);
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -31,5 +31,16 @@
     font-weight: 400;
     margin: 0 auto;
     padding-left: 1050px;
+    display: block;
+}
+
+#new_game_stats_block {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 850px;
+    padding-right: 850px;
+    padding-top: 100px;
+    padding-bottom: 10px;
     display: block;
 }

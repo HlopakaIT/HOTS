@@ -8,13 +8,34 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form  action="" id="new_game_stats_block">
+        <input type="text" id="hero_type_area">
+        <fieldset>
+            <legend>Game result:</legend>
+
+            <p>
+              <input type="radio" id="win" name="win_lose" value="win" checked />
+              <label for="win">Win</label>
+            </p>
+          
+            <p>
+              <input type="radio" id="lose" name="win_lose" value="lose" />
+              <label for="lose">Lose</label>
+            </p>
+          
+        </fieldset>
+        <button id="add_record_button" type="button">Add Record</button>
+    </form>
     <button id="show_stats" type="button">Show Stats</button>
     <select id="select">
         <option value="Hanzo" selected>Hanzo</option>
         <option value="Genji">Genji</option>
         <option value="Sylvanas">Sylvanas</option>
       </select>
+
     <div id="stats_block">
+        
 
     </div>
 

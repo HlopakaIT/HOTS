@@ -57,15 +57,35 @@ function showStats(event) {
 
     const wr = (wins / heroStats.length) * 100
     
-    statsElement.innerHTML = `W:${wins} L:${loses} WR:${wr}%`
-    
-    
-    
+    statsElement.innerHTML = `W:${wins} L:${loses} WR:${wr.toFixed(2)}%`
+       
     statsBlock.append(statsElement)
+}
+
+const recordButton = document.getElementById("add_record_button")
 
 
+recordButton.addEventListener("click", addRecord)
 
+const winLoseRadio = document.getElementsByName("win_lose")
 
+function addRecord(event) {
+    const heroTypeArea = document.getElementById("hero_type_area")
+    for(i = 0; i < winLoseRadio.length; i++) {
+        if(winLoseRadio[i].checked) {
+            const gameScore = {
+                hero: heroTypeArea.value,
+                win: switchScoreIntoTrueFalse()
+            }
+            heroesStats.push(gameScore)
+        }
+    }
 
+ 
+}
 
+function switchScoreIntoTrueFalse() {
+    if(winLoseRadio[i].value === "win") return true
+    
+    return false
 }
