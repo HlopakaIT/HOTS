@@ -71,11 +71,12 @@ const winLoseRadio = document.getElementsByName("win_lose")
 
 function addRecord(event) {
     const heroTypeArea = document.getElementById("hero_type_area")
-    for(i = 0; i < winLoseRadio.length; i++) {
+    for(let i = 0; i < winLoseRadio.length; i++) {
         if(winLoseRadio[i].checked) {
+            const winLoseValue = winLoseRadio[i].value
             const gameScore = {
                 hero: heroTypeArea.value,
-                win: switchScoreIntoTrueFalse()
+                win: switchScoreIntoTrueFalse(winLoseValue)
             }
             heroesStats.push(gameScore)
         }
@@ -84,8 +85,8 @@ function addRecord(event) {
  
 }
 
-function switchScoreIntoTrueFalse() {
-    if(winLoseRadio[i].value === "win") return true
+function switchScoreIntoTrueFalse(winLoseValue) {
+    if(winLoseValue === "win") return true
     
     return false
 }
