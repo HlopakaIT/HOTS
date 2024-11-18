@@ -1,29 +1,6 @@
-const heroesStats = [ 
-    {
-        hero: "Genji",
-        win: true,
-    },
-    {
-        hero: "Hanzo",
-        win: false,
-    },
-    {
-        hero: "Sylvanas",
-        win: true,
-    },
-    {
-        hero: "Hanzo",
-        win: true,
-    },
-    {
-        hero: "Sylvanas",
-        win: true,
-    },
-    {
-        hero: "Genji",
-        win: false,
-    },
-]
+const heroesStats = JSON.parse(
+    localStorage.getItem("userMatchHistory")
+)
 
 const showStatsButton = document.getElementById("show_stats")
 
@@ -56,14 +33,14 @@ function showStats(event) {
 
 
     const wr = (wins / heroStats.length) * 100
-    
+
     statsElement.innerHTML = `W:${wins} L:${loses} WR:${wr.toFixed(2)}%`
        
     statsBlock.append(statsElement)
 }
 
-const recordButton = document.getElementById("add_record_button")
 
+const recordButton = document.getElementById("add_record_button")
 
 recordButton.addEventListener("click", addRecord)
 
@@ -78,15 +55,36 @@ function addRecord(event) {
                 hero: heroTypeArea.value,
                 win: switchScoreIntoTrueFalse(winLoseValue)
             }
+
             heroesStats.push(gameScore)
+
+            localStorage.setItem(
+                "userMatchHistory",
+                JSON.stringify(
+                    heroesStats
+                )
+            )
         }
     }
 
- 
 }
 
 function switchScoreIntoTrueFalse(winLoseValue) {
     if(winLoseValue === "win") return true
     
     return false
+}
+
+const clearMatchHistoryButton = document.getElementById("clear_match_history_button")
+
+clearMatchHistoryButton.addEventListener("click", clearMatchHstory)
+
+function clearMatchHstory(event) {
+    localStorage.setItem(
+        "userMatchHistory",
+        JSON.stringify(
+            []
+        )
+    )
+    location.reload()
 }
