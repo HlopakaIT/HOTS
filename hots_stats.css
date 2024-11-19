@@ -1,4 +1,4 @@
-#show_stats {
+#show-stats {
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -25,7 +25,7 @@
     display: block;
 }
 
-#stats_block {
+#stats-block {
 
     font-size: 18px;
     font-weight: 400;
@@ -34,7 +34,7 @@
     display: block;
 }
 
-#new_game_stats_block {
+#new-game-stats-block {
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -45,7 +45,7 @@
     display: block;
 }
 
-#clear_match_history_button {
+#clear-match-history-button {
     text-align: center;
     margin: 0 auto;
     background-color: rgb(255, 0, 0);
