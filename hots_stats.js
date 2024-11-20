@@ -1,6 +1,7 @@
 const heroesStats = JSON.parse(
-    localStorage.getItem("userMatchHistory")
+    localStorage.getItem("userMatchHistory") || "[]"
 )
+
 
 const showStatsButton = document.getElementById("show-stats")
 
