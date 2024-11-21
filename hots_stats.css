@@ -26,13 +26,17 @@
 }
 
 #stats-block {
-
     font-size: 18px;
     font-weight: 400;
     margin: 0 auto;
-    padding-left: 1050px;
     display: block;
 }
+
+th, td {
+    padding: 20px;
+    text-align: left;
+}
+
 
 #new-game-stats-block {
     text-align: center;
@@ -40,10 +44,12 @@
     font-weight: 400;
     padding-left: 850px;
     padding-right: 850px;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 10px;
     display: block;
 }
+
+
 
 #clear-match-history-button {
     text-align: center;
@@ -51,3 +57,4 @@
     background-color: rgb(255, 0, 0);
     display: block;
 }
+

@@ -8,15 +8,13 @@ const showStatsButton = document.getElementById("show-stats")
 showStatsButton.addEventListener("click", showStats)
 
 function showStats(event) {
-    if(document.querySelector(".stats-element")) {
-        document.querySelector(".stats-element").remove()
-    }
     
     const currentSelected = document.getElementById("select")
     const heroStats = heroesStats.filter((heroName) => currentSelected.value === heroName.hero)
-    const statsElement = document.createElement("p")
-    statsElement.classList.add("stats-element")
     const statsBlock = document.getElementById("stats-block")
+    const tableWins = document.getElementById("table-wins")
+    const tableLoses = document.getElementById("table-losses")
+    const tableWinrate = document.getElementById("table-winrate")
 
 
     const wins = heroStats.reduce((winsSum, win) => {
@@ -35,9 +33,11 @@ function showStats(event) {
 
     const wr = (wins / heroStats.length) * 100
 
-    statsElement.innerHTML = `W:${wins} L:${loses} WR:${wr.toFixed(2)}%`
-       
-    statsBlock.append(statsElement)
+    tableWins.innerHTML = wins
+    tableLoses.innerHTML = loses
+    tableWinrate.innerHTML = `${wr.toFixed(2)}%`
+
+    statsBlock.style.display = "table"
 }
 
 

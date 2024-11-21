@@ -10,8 +10,9 @@
 <body>
   <button id="clear-match-history-button" type="button">Clear Match History</button>
   <form  action="" id="new-game-stats-block">
+    <label for="hero-type-area">Played hero:</label>
     <input type="text" id="hero-type-area">
-      <fieldset>
+      <fieldset id="game-result-fieldset">
         <legend>Game result:</legend>
 
         <p>
@@ -28,17 +29,29 @@
       <button id="add-record-button" type="button">Add Record</button>
   </form>
   <button id="show-stats" type="button">Show Stats</button>
+  <table id="stats-block" style="display:none;">
+    <thead>
+      <tr>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Winrate</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr>
+        <td id="table-wins"></td>
+        <td id="table-losses"></td>
+        <td id="table-winrate"></td>
+      </tr>
+    </tbody>
+
+  </table>
   <select id="select">
       <option value="Hanzo" selected>Hanzo</option>
       <option value="Genji">Genji</option>
       <option value="Sylvanas">Sylvanas</option>
     </select>
-
-    <div id="stats-block">
-        
-
-    </div>
-
 
   <script src="hots_stats.js"></script>
 </body>
