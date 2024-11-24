@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HOTS_Stats</title>
+    <title>HOTS STATS</title>
     <link rel='stylesheet' href='hots_stats.css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
+  <nav id="navigation">
+    <a href="hots_stats_history.html">History</a>
+  </nav>
   <button id="clear-match-history-button" type="button">Clear Match History</button>
-  <form  action="" id="new-game-stats-block">
-    <label for="hero-type-area">Played hero:</label>
-    <input type="text" id="hero-type-area">
-      <fieldset id="game-result-fieldset">
-        <legend>Game result:</legend>
-
-        <p>
-          <input type="radio" id="win" name="win-lose" value="win" checked />
-          <label for="win">Win</label>
-        </p>
-        
-        <p>
-          <input type="radio" id="lose" name="win-lose" value="lose" />
-          <label for="lose">Lose</label>
-        </p>
-        
-      </fieldset>
-      <button id="add-record-button" type="button">Add Record</button>
-  </form>
   <button id="show-stats" type="button">Show Stats</button>
   <table id="stats-block" style="display:none;">
     <thead>
@@ -52,7 +35,6 @@
       <option value="Genji">Genji</option>
       <option value="Sylvanas">Sylvanas</option>
     </select>
-
   <script src="hots_stats.js"></script>
 </body>
 </html>

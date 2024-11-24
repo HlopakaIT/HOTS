@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTS STATS</title>
+    <link rel='stylesheet' href='hots_stats.css'>
+</head>
+<body>
+    <nav id="navigation">
+        <a href="hots_stats.html">Add Record</a>
+      </nav>
+    <button id="clear-match-history-button" type="button">Clear Match History</button>  
+    <form  action="" id="new-game-stats-block">
+      <label for="hero-type-area">Played hero:</label>
+      <input type="text" id="hero-type-area">
+        <fieldset id="game-result-fieldset">
+          <legend>Game result:</legend>
+  
+          <p>
+            <input type="radio" id="win" name="win-lose" value="win" checked />
+            <label for="win">Win</label>
+          </p>
+          
+          <p>
+            <input type="radio" id="lose" name="win-lose" value="lose" />
+            <label for="lose">Lose</label>
+          </p>
+          
+        </fieldset>
+        <button id="add-record-button" type="button">Add Record</button>
+    </form>
+    <script src="hots_stats_history.js"></script>
+</body>
+</html>
